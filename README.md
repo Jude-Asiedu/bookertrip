@@ -98,7 +98,7 @@ Access to routes is protected using **Angular Route Guards** and roles stored in
 
 ---
 
-## 📦 Sample Features to Add (Suggestions)
+## 📦 Future Features to Add (Suggestions)
 
 * ✅ Payment gateway integration
 * 🌐 Multi-language support
