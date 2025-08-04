@@ -1,6 +1,3 @@
-Sure! Here's a **complete and polished `README.md`** for your Angular 14 project called **BookTrip** — a flight booking platform with separate dashboards for users, admins, and vendors:
-
----
 
 # ✈️ BookTrip – Flight Booking Platform
 
