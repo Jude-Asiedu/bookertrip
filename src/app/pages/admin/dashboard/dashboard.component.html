@@ -1,0 +1,222 @@
+<!-- VERSION 1 -->
+<!-- <div class="container-fluid py-4">
+  Page Title + Breadcrumb
+  <div class="mb-4">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-1">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+      </ol>
+    </nav>
+    <h2 class="fw-bold">Dashboard</h2>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-3 col-sm-6 mb-3">
+      <div class="card shadow-sm p-3">
+        <h6>Total Users</h6>
+        <h3 class="fw-bold">1,245</h3>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-3">
+      <div class="card shadow-sm p-3">
+        <h6>Revenue</h6>
+        <h3 class="fw-bold">$54,230</h3>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-3">
+      <div class="card shadow-sm p-3">
+        <h6>Orders</h6>
+        <h3 class="fw-bold">876</h3>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6 mb-3">
+      <div class="card shadow-sm p-3">
+        <h6>Active Sessions</h6>
+        <h3 class="fw-bold">312</h3>
+      </div>
+    </div>
+  </div>
+
+  Charts
+  <div class="row">
+    <div class="col-lg-6 mb-4">
+      <div class="card shadow-sm p-3">
+        <h6 class="mb-3">Sales Overview</h6>
+        <canvas id="salesChart"></canvas>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-4">
+      <div class="card shadow-sm p-3">
+        <h6 class="mb-3">User Growth</h6>
+        <canvas id="usersChart"></canvas>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="container-fluid py-4">
+  <!-- Stats Cards -->
+  <div class="row g-3">
+    <div class="col-sm-6 col-lg-3">
+      <div class="card shadow-sm border-0 text-center p-3">
+        <h6 class="text-muted">Total Users</h6>
+        <h3 class="fw-bold">1,245</h3>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card shadow-sm border-0 text-center p-3">
+        <h6 class="text-muted">Revenue</h6>
+        <h3 class="fw-bold">$34,500</h3>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card shadow-sm border-0 text-center p-3">
+        <h6 class="text-muted">Orders</h6>
+        <h3 class="fw-bold">563</h3>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <div class="card shadow-sm border-0 text-center p-3">
+        <h6 class="text-muted">Bounce Rate</h6>
+        <h3 class="fw-bold">32%</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts v2.1 -->
+  <!-- <div class="row g-4 mt-4">
+    <div class="col-lg-8">
+      <div class="card shadow-sm border-0 p-3">
+        <h6 class="fw-bold mb-3">Sales Overview</h6>
+        <canvas id="salesChart" height="150"></canvas>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="card shadow-sm border-0 p-3">
+        <h6 class="fw-bold mb-3">Traffic Sources</h6>
+        <canvas id="trafficChart" height="200"></canvas>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="row my-4">
+        <div class="col-lg-8">
+      <div class="card shadow-sm border-0 p-3">
+        <h6 class="fw-bold mb-3">Monthly Sales</h6>
+       <canvas #userGrowthChart></canvas>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card shadow-sm border-0 p-3">
+        <h6 class="fw-bold mb-3">User Demographics</h6>
+        <canvas #trafficChart height="120"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-4">
+  <div class="col-md-4">
+    <div class="card shadow-sm p-3">
+      <h5 class="fw-bold mb-3">Sales Overview</h5>
+      <canvas #salesChart></canvas>
+    </div>
+  </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm p-3">
+        <h5 class="fw-bold mb-3">Visitors Trend</h5>
+        <canvas #visitorsChart></canvas>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-sm p-3">
+        <h5 class="fw-bold mb-3">Revenue Split</h5>
+        <canvas #revenueChart height="120"></canvas>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Table -->
+  <div class="card shadow-sm border-0 mt-4">
+    <div class="card-header bg-white fw-bold">Recent Orders</div>
+    <div class="table-responsive">
+      <table class="table mb-0">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1001</td>
+            <td>John Doe</td>
+            <td>2025-08-01</td>
+            <td>$250</td>
+            <td><span class="badge bg-success">Completed</span></td>
+          </tr>
+          <tr>
+            <td>#1002</td>
+            <td>Jane Smith</td>
+            <td>2025-08-02</td>
+            <td>$180</td>
+            <td><span class="badge bg-warning">Pending</span></td>
+          </tr>
+          <tr>
+            <td>#1003</td>
+            <td>Mark Lee</td>
+            <td>2025-08-03</td>
+            <td>$420</td>
+            <td><span class="badge bg-danger">Cancelled</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row g-4 mt-1">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Weather Trends (°C)</h5>
+          <canvas #weatherChart></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Stock Prices ($)</h5>
+          <canvas #stockChart></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Progress Bars -->
+  <div class="row g-4 mt-4">
+    <div class="col-lg-6">
+      <div class="card shadow-sm border-0 p-3">
+        <h6 class="fw-bold">Project Completion</h6>
+        <div class="progress mt-2" style="height: 8px;">
+          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card shadow-sm border-0 p-3">
+        <h6 class="fw-bold">Customer Satisfaction</h6>
+        <div class="progress mt-2" style="height: 8px;">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 85%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
