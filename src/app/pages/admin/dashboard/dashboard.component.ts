@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 import { SharedModule } from '../../../shared/shared.module';
+import { isPlatformBrowser } from '@angular/common';
 
 Chart.register(...registerables)
 
@@ -19,7 +20,10 @@ export class DashboardComponent implements AfterViewInit {
   @ViewChild('userGrowthChart') userGrowthRef!: ElementRef<HTMLCanvasElement>;
   @ViewChild('weatherChart') weatherRef!: ElementRef<HTMLCanvasElement>;
   @ViewChild('stockChart') stockRef!: ElementRef<HTMLCanvasElement>;
-
+  isBrowser!: boolean;
+  constructor(@Inject(PLATFORM_ID) private platformId: Object){
+     this.isBrowser = isPlatformBrowser(this.platformId);
+  }
    ngAfterViewInit() {
     // Sales Chart V1
     // new Chart('salesChart', {
@@ -52,13 +56,14 @@ export class DashboardComponent implements AfterViewInit {
     // });
 
     // V2
+    if (isPlatformBrowser(this.platformId)) {
     this.loadSalesChart();
     this.loadVisitorsChart();
     this.loadRevenueChart();
     this.renderTrafficChart()
     this.createUserGrowthChart();
     this.createStockChart();
-    this.createWeatherChart();
+    this.createWeatherChart();}
   }
 
 
@@ -78,7 +83,7 @@ export class DashboardComponent implements AfterViewInit {
 
 
   loadSalesChart() {
-    new Chart(this.salesChart.nativeElement, {
+    new Chart(this.salesChart?.nativeElement, {
       type: 'bar',
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
