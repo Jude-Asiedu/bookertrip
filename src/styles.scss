@@ -54,3 +54,11 @@ $colors: (
     background-color: rgba($color, 0.1);
   }
 }
+
+
+.btn-xs {
+  padding: 0.15rem 0.4rem; /* smaller padding */
+  font-size: 0.75rem;       /* smaller text */
+  line-height: 1.2;
+  border-radius: 0.2rem;    /* optional */
+}

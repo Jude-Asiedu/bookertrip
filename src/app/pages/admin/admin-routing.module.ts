@@ -5,17 +5,23 @@ import { LayoutComponent } from './layout/layout.component';
 import { AllFlightsComponent } from './all-flights/all-flights.component';
 import { BookingsComponent } from './bookings/bookings.component';
 import { CityComponent } from './city/city.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'admin',
+    redirectTo:'dashboard',
     pathMatch:'full'
   },
   {
-    path:'admin',
+    path:'',
     component:LayoutComponent,
     children:[
+      {
+          path:'dashboard',
+          component:DashboardComponent,
+          title:'Airports'
+      },
       {
           path:'airports',
           component:AirportsComponent,
