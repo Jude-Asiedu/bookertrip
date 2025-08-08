@@ -1,0 +1,44 @@
+.logoName{
+    font-size: 2.025rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+}
+
+.nav-hover{
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* ensures scaling works smoothly */
+  }
+  .nav-hover:hover {
+    color: #ff4d4d !important; /* red hue */
+    transform: scale(1.1); /* slightly bigger */
+  }
+
+.sidenav-hover{
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* ensures scaling works smoothly */
+  }
+
+.sidenav-hover:hover {
+  color: #000000 !important; /* red hue */
+  transform: scale(1.1); /* slightly bigger */
+}
+
+.active-link {
+    font-weight: 500;
+    transform: scale(1.1);
+  }
+
+.nav-item:has(.active-link)  {
+  background-color: rgb(255, 255, 255);
+  // border-right: 2px white solid;
+  color: #000000;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.20);
+
+}
+
+.breadcrumb-item a:hover {
+    color: #ff4d4d;
+}

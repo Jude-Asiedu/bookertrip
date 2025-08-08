@@ -1,36 +1,67 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
-  <div class="container-fluid">
-    <a class="navbar-brand text-white" href="#">BookTrip</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div style="min-height: 100vh; display: flex; flex-direction: column; margin: 0;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top" style="padding: 1.5rem 1rem;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white logoName" href="#">BookTrip</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Search Flights</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">My Bookings</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Dashboard</a>
-        </li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fw-light mt-sm-4 mt-md-0">
+          <li class="nav-item"><a class="nav-link text-white nav-hover" href="#">Dashbaord</a></li>
+          <li class="nav-item"><a class="nav-link text-white nav-hover" href="#">Search Flights</a></li>
+          <li class="nav-item"><a class="nav-link text-white nav-hover" href="#">My Bookings</a></li>
+          <li class="nav-item"><a class="nav-link text-white nav-hover" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Layout with SideNav -->
+  <div style="flex: 1; display: flex; min-height: 0;">
+    <div id="sideNav" class="collapse d-lg-block bg-white pt-5 shadow-lg"
+      style="width: 230px; padding-top: 1rem; position: sticky; top: 0; height: 100vh; overflow-y: auto;">
+      <ul class="nav flex-column  pt-5">
+        <li class="nav-item my-1 ps-4 py-3 fw-light"><a class="nav-link text-dark sidenav-hover" routerLink="/admin/dashboard"
+            routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a></li>
+        <li class="nav-item my-1 ps-4 py-3 fw-light"><a class="nav-link text-dark sidenav-hover" routerLink="/admin/all-flights"
+            routerLinkActive="active-link"> Flights</a></li>
+        <li class="nav-item my-1 ps-4 py-3 fw-light"><a class="nav-link text-dark sidenav-hover" routerLink="/admin/all-bookings"
+            routerLinkActive="active-link">All Bookings</a></li>
+        <li class="nav-item my-1 ps-4 py-3 fw-light"><a class="nav-link text-dark sidenav-hover" routerLink="/admin/airports"
+            routerLinkActive="active-link">Airports</a></li>
+        <li class="nav-item my-1 ps-4 py-3 fw-light"><a class="nav-link text-dark sidenav-hover" routerLink="/admin/city"
+            routerLinkActive="active-link">City</a></li>
       </ul>
     </div>
+    <!-- Main Content -->
+    <main class="flex-fill p-3 p-lg-5">
+        <app-breadcrumb
+            [pageTitle]="'Dashboard Overview'"
+            [breadcrumbs]="[
+              { label: 'Home', url: '/' },
+              { label: 'Admin', url: '/admin' },
+              { label: 'Dashboard Overview' }
+            ]">
+          </app-breadcrumb>
+      <!-- <div class="my-4">
+        <h2 class="mb-2 fw-bold">Page Title</h2>
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-dark">Home</a></li>
+            <li class="breadcrumb-item"><a routerLink="/admin" class="text-decoration-none text-dark">Section</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Current Page</li>
+          </ol>
+        </nav>
+      </div> -->
+
+      <div class="pt-4">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
   </div>
-</nav>
-
-<router-outlet />
-
+  <!-- Footer -->
+  <footer class="bg-black text-white text-center" style="padding: 0.75rem; font-size: 0.9rem;">
+    © 2025 BookTrip. All rights reserved.
+  </footer>
+</div>
