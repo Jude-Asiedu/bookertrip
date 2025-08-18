@@ -1,0 +1,78 @@
+<div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+  <div class="row w-100 shadow-lg rounded-4 overflow-hidden" style="max-width: 950px;">
+
+    <!-- Left: Form -->
+    <div class="col-md-6 bg-white p-5 d-flex flex-column justify-content-center">
+      <h3 class="fw-bold mb-3">Create Account</h3>
+      <p class="text-muted mb-4">Join us today! It takes only a few steps</p>
+
+      <form>
+        <!-- Name -->
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" id="name" placeholder="John Doe">
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+          <input type="email" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+          <input type="password" class="form-control" id="password" placeholder="Enter password">
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-4">
+          
+          <label for="confirmPassword" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+          <input type="password" class="form-control" id="confirmPassword" placeholder="Re-enter password">
+        </div>
+
+        <!-- Signup Button -->
+        <button type="submit" class="btn btn-primary w-100 mb-3" routerLink="/dashboard">
+          Sign Up
+        </button>
+
+        <!-- Divider -->
+        <div class="text-center text-muted mb-3">Or Continue With</div>
+
+        <!-- Social Signup -->
+        <div class="d-flex justify-content-center gap-2">
+          <button type="button" class="btn btn-outline-danger w-50">
+            <i class="bi bi-google me-2"></i> Google
+          </button>
+          <button type="button" class="btn btn-outline-primary w-50">
+            <i class="bi bi-facebook me-2"></i> Facebook
+          </button>
+        </div>
+
+        <!-- Already have an account -->
+        <p class="text-center mt-4 mb-0 text-muted">
+          Already have an account?
+          <a routerLink="/login" class="fw-bold text-decoration-none">Log in</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Right: Background Image -->
+    <div class="col-md-6 d-none d-md-block p-0 position-relative">
+      <!-- Background -->
+      <div class="h-100 w-100 bg-cover"
+           style="background: url('assets/signup-bg.jpg') center/cover no-repeat;">
+      </div>
+
+      <!-- Overlay -->
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"></div>
+
+      <!-- Overlay text -->
+      <div class="position-absolute top-50 start-50 translate-middle text-white text-center px-3">
+        <h2 class="fw-bold">Welcome to Our Community 🎉</h2>
+        <p class="mt-2">Start your journey with us today and unlock exclusive features!</p>
+      </div>
+    </div>
+  </div>
+</div>
