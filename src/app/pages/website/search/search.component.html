@@ -1,96 +1,105 @@
 
 <div class="mx-5 mt-5 pt-5 ">
 
-  <div class="row ">
-    <div class="col-sm-11 col-md-10 col-lg-7 col-xl-9 mx-auto">
+  <div class="row">
+    <div class=" col-md-2   col-lg-3 ">
+      <div class="card bg-light mt-5 rounded-3 border-light">
+        <div class="card-body">
+          <div class="my-4">
+            <h4 class="text-center">
+              Filters <i class="fa fa-filter text-muted"></i>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-10 col-lg-9">
+      <div class="row mt-5 d-flex justify-content-between match-height">
+        <div class="col-sm-6 col-md-4 col-lg-2 col-2 ">
+          <span>From</span>
+          <div class="card shadow-sm mt-2 border-light bg-light">
+            <div class="card-body">
+              <label class="text-info pb-0"> Accra</label>
+              <p  class="text-muted"> Kotoka Airport Plantation</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2 col-2">
+          <span>To</span>
+          <div class="card shadow-sm mt-2 border-light bg-light">
+            <div class="card-body">
+              <label class="text-info pb-0"> Kumasi</label>
+              <p  class="text-muted"> Ashanti Airport</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2  col-2">
+          <span>Depature Date</span>
+          <div class="card shadow-sm mt-2 border-light bg-light">
+            <div class="card-body">
+              <label class="text-info pb-0"> 20 March</label>
+              <p  class="text-muted"> Sunday</p>
+            </div>
+          </div>
+        </div>
+        <div class=" col-sm-6 col-md-4 col-lg-2 col-2">
+          <span>Return Date</span>
+          <div class="card shadow-sm mt-2 border-light bg-light">
+            <div class="card-body">
+              <label class="text-info pb-0"> 27 March</label>
+              <p  class="text-muted"> Sunday</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-2  col-2">
+          <span>Room & Traveler</span>
+          <div class="card shadow-sm mt-2 border-light bg-light">
+            <div class="card-body">
+              <label class="text-info pb-0"> 2 Rooms, 5 Traveler</label>
+              <p  class="text-muted"> 2 Adults , 3 Kids</p>
+            </div>
+          </div>
+        </div>
 
+      </div>
 
-  <div class="row   mt-5 d-flex justify-content-between">
-    <div class="col-2">
-      <span>From</span>
-      <div class="card shadow-sm mt-2 border-light bg-light">
-        <div class="card-body">
-          <label class="text-info pb-0"> Accra</label>
-          <p  class="text-muted"> Kotoka Airport Plantation</p>
+      <div class=" d-flex justify-content-between mt-5">
+        <div class="col-auto ">
+          <div class="row d-flex align-items-center">
+            <div class="form-group col-auto">
+            <input type="checkbox"  class="form-check-input "  name="oneway" id="tripType" />
+            <label for="tripType" class="ms-2">One Way</label>
+            </div>
+            <div class="form-group col-auto">
+            <input type="checkbox"  class="form-check-input "  name="oneway" id="return" />
+            <label for="return" class="ms-2">Return </label>
+          </div>
+          <div class="form-group col-auto">
+            <input type="checkbox" class="form-check-input "  name="oneway" id="multi" />
+            <label for="multi" class="ms-2">Multi City</label>
+            </div>
+          <div class="form-group col-auto">
+          <select name="numberofAdults" id="" class="form-select ">
+            <option value="1"> 1 Adults</option>
+            <option value="2"> 2 Adults</option>
+            <option value="3"> 2 Adults ,1 Child</option>
+            <option value="4"> 3 Adults, 2 Children</option>
+          </select>
+            </div>
+          <div class="form-group col-auto">
+          <select name="typeOfFlights" id="" class="form-select ">
+            <option value="economy"> Economy</option>
+            <option value="businessClasss"> Business Class</option>
+            <option value="fristClass"> First Class</option>
+            <option value="jets"> Private Jets</option>
+          </select>
+            </div>
+        </div>
+        </div>
+          <div class="">
+            <button class="btn btn-lg btn-primary"> Search Flights</button>
         </div>
       </div>
-    </div>
-    <div class="col-2">
-      <span>To</span>
-      <div class="card shadow-sm mt-2 border-light bg-light">
-        <div class="card-body">
-          <label class="text-info pb-0"> Kumasi</label>
-          <p  class="text-muted"> Ashanti Airport</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-2">
-      <span>Depature Date</span>
-      <div class="card shadow-sm mt-2 border-light bg-light">
-        <div class="card-body">
-          <label class="text-info pb-0"> 20 March</label>
-          <p  class="text-muted"> Sunday</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-2">
-      <span>Return Date</span>
-      <div class="card shadow-sm mt-2 border-light bg-light">
-        <div class="card-body">
-           <label class="text-info pb-0"> 27 March</label>
-          <p  class="text-muted"> Sunday</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-2">
-      <span>Room & Traveler</span>
-      <div class="card shadow-sm mt-2 border-light bg-light">
-        <div class="card-body">
-           <label class="text-info pb-0"> 2 Rooms, 5 Traveler</label>
-          <p  class="text-muted"> 2 Adults , 3 Kids</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class=" d-flex justify-content-between mt-5">
-    <div class="col">
-      <div class="row d-flex align-items-center">
-        <div class="form-group col-1">
-        <input type="checkbox"  class="form-check-input "  name="oneway" id="tripType" />
-        <label for="tripType" class="ms-2">One Way</label>
-         </div>
-        <div class="form-group col-1">
-        <input type="checkbox"  class="form-check-input "  name="oneway" id="return" />
-        <label for="return" class="ms-2">Return </label>
-       </div>
-       <div class="form-group col-1">
-        <input type="checkbox" class="form-check-input "  name="oneway" id="multi" />
-        <label for="multi" class="ms-2">Multi City</label>
-        </div>
-       <div class="form-group col-2">
-       <select name="numberofAdults" id="" class="form-select ">
-        <option value="1"> 1 Adults</option>
-        <option value="2"> 2 Adults</option>
-        <option value="3"> 2 Adults ,1 Child</option>
-        <option value="4"> 3 Adults, 2 Children</option>
-       </select>
-        </div>
-       <div class="form-group col-2">
-       <select name="typeOfFlights" id="" class="form-select ">
-        <option value="economy"> Economy</option>
-        <option value="businessClasss"> Business Class</option>
-        <option value="fristClass"> First Class</option>
-        <option value="jets"> Private Jets</option>
-       </select>
-        </div>
-     </div>
-    </div>
-      <div class="">
-        <button class="btn btn-lg btn-primary"> Search Flights</button>
-    </div>
-  </div>
    </div>
   </div>
 </div>

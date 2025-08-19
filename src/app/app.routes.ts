@@ -43,12 +43,12 @@ export const routes: Routes = [
   {
     path:'reset-passsword',
     component:ResetpasswordComponent,
-    title:'Login Page'
+    title:'Reset Password'
   },
   {
     path:'signup',
     component:SignupComponent,
-    title:'Login Page'
+    title:'Signup Page'
   },
   {
     path:'admin',
